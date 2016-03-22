@@ -37,3 +37,5 @@ async function checkNPMPermissions() {
     {estimate: 2500}
   );
 
+  console.log('');
+
