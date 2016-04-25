@@ -57,3 +57,12 @@ async function checkNPMPermissions() {
     process.exit(1);
   }
 }
+
+function clear() {
+  console.clear();
+}
+
+async function confirm(message, exitFunction) {
+  console.log('');
+
+  const {confirmation} = await inquirer.prompt({
