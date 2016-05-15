@@ -84,3 +84,8 @@ async function confirm(message, exitFunction) {
 
 async function confirmContinue(exitFunction) {
   await confirm('Continue the release?', exitFunction);
+}
+
+async function execRead(command, options) {
+  const {stdout} = await exec(command, options);
+
