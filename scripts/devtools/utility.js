@@ -89,3 +89,13 @@ async function confirmContinue(exitFunction) {
 async function execRead(command, options) {
   const {stdout} = await exec(command, options);
 
+  return stdout.trim();
+}
+
+function readSavedBuildMetadata() {
+  const path = join(BUILD_METADATA_TEMP_DIRECTORY, 'metadata');
+
+  if (!existsSync(path)) {
+    console.error(chalk.red('Expected to find build metadata at:'));
+    console.error(chalk.dim(`  ${path}`));
+    process.exit(1);
