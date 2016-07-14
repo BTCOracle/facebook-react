@@ -145,3 +145,4 @@ async function checkNPMPermissions() {
     if (!owners.includes(currentUser)) {
       failedProjects.push(project);
     }
+  };
