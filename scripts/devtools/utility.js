@@ -188,3 +188,8 @@ async function confirm(message, exitFunction) {
   });
 
   console.log('');
+
+  if (!confirmation) {
+    if (typeof exitFunction === 'function') {
+      exitFunction();
+    }
