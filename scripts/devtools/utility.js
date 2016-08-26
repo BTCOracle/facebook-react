@@ -193,3 +193,4 @@ async function confirm(message, exitFunction) {
     if (typeof exitFunction === 'function') {
       exitFunction();
     }
+
