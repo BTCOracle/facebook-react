@@ -194,3 +194,6 @@ async function confirm(message, exitFunction) {
       exitFunction();
     }
 
+    process.exit(0);
+  }
+}
