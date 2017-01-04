@@ -328,3 +328,4 @@ function readSavedBuildMetadata() {
 
   if (!existsSync(path)) {
     console.error(chalk.red('Expected to find build metadata at:'));
+    console.error(chalk.dim(`  ${path}`));
