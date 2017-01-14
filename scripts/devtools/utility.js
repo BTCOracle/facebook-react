@@ -329,3 +329,13 @@ function readSavedBuildMetadata() {
   if (!existsSync(path)) {
     console.error(chalk.red('Expected to find build metadata at:'));
     console.error(chalk.dim(`  ${path}`));
+    process.exit(1);
+  }
+
+  const {archivePath, currentCommitHash} = readJsonSync(path);
+
+  return {archivePath, currentCommitHash};
+}
+
+function saveBuildMetadata({archivePath, currentCommitHash}) {
+  const path = join(BUILD_METADATA_TEMP_DIRECTORY, 'metadata');
