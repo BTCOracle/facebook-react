@@ -372,3 +372,5 @@ async function checkNPMPermissions() {
       .filter(owner => owner)
       .map(owner => owner.split(' ')[0]);
 
+    if (!owners.includes(currentUser)) {
+      failedProjects.push(project);
