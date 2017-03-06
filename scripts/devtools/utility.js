@@ -378,3 +378,18 @@ async function checkNPMPermissions() {
   };
 
   await logger(
+    Promise.all(NPM_PACKAGES.map(checkProject)),
+    `Checking NPM permissions for ${chalk.bold(currentUser)}.`,
+    {estimate: 2500}
+  );
+
+  console.log('');
+
+  if (failedProjects.length) {
+    console.error(chalk.red.bold('Insufficient NPM permissions'));
+    console.error('');
+    console.error(
+      chalk.red(
+        `NPM user {underline ${currentUser}} is not an owner for: ${chalk.bold(
+          failedProjects.join(', ')
+        )}`
