@@ -521,3 +521,7 @@ async function checkNPMPermissions() {
 
 function clear() {
   console.clear();
+}
+
+async function confirm(message, exitFunction) {
+  console.log('');
