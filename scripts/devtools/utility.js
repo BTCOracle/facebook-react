@@ -536,3 +536,9 @@ async function confirm(message, exitFunction) {
 
   if (!confirmation) {
     if (typeof exitFunction === 'function') {
+      exitFunction();
+    }
+
+    process.exit(0);
+  }
+}
