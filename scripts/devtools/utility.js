@@ -542,3 +542,8 @@ async function confirm(message, exitFunction) {
     process.exit(0);
   }
 }
+
+async function confirmContinue(exitFunction) {
+  await confirm('Continue the release?', exitFunction);
+}
+
