@@ -581,3 +581,8 @@ module.exports = {
   checkNPMPermissions,
   clear,
   confirm,
+  confirmContinue,
+  execRead,
+  logger,
+  readSavedBuildMetadata,
+  saveBuildMetadata,
