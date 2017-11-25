@@ -638,3 +638,4 @@ function clear() {
   console.clear();
 }
 
+async function confirm(message, exitFunction) {
