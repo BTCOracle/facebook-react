@@ -644,3 +644,11 @@ async function confirm(message, exitFunction) {
   const {confirmation} = await inquirer.prompt({
     name: 'confirmation',
     type: 'confirm',
+    message,
+  });
+
+  console.log('');
+
+  if (!confirmation) {
+    if (typeof exitFunction === 'function') {
+      exitFunction();
