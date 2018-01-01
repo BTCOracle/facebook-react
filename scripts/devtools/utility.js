@@ -680,3 +680,4 @@ function readSavedBuildMetadata() {
   const {archivePath, currentCommitHash} = readJsonSync(path);
 
   return {archivePath, currentCommitHash};
+}
