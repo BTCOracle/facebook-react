@@ -720,3 +720,8 @@ async function checkNPMPermissions() {
     if (!owners.includes(currentUser)) {
       failedProjects.push(project);
     }
+  };
+
+  await logger(
+    Promise.all(NPM_PACKAGES.map(checkProject)),
+    `Checking NPM permissions for ${chalk.bold(currentUser)}.`,
