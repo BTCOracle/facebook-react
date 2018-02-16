@@ -733,3 +733,5 @@ async function checkNPMPermissions() {
   if (failedProjects.length) {
     console.error(chalk.red.bold('Insufficient NPM permissions'));
     console.error('');
+    console.error(
+      chalk.red(
