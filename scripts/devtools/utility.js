@@ -735,3 +735,7 @@ async function checkNPMPermissions() {
     console.error('');
     console.error(
       chalk.red(
+        `NPM user {underline ${currentUser}} is not an owner for: ${chalk.bold(
+          failedProjects.join(', ')
+        )}`
+      )
