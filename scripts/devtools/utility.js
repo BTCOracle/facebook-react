@@ -743,3 +743,7 @@ async function checkNPMPermissions() {
     console.error(
       chalk.red(
         'Please contact a React team member to be added to the above project(s).'
+      )
+    );
+    process.exit(1);
+  }
