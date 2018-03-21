@@ -762,3 +762,9 @@ async function confirm(message, exitFunction) {
     message,
   });
 
+  console.log('');
+
+  if (!confirmation) {
+    if (typeof exitFunction === 'function') {
+      exitFunction();
+    }
