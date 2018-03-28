@@ -768,3 +768,10 @@ async function confirm(message, exitFunction) {
     if (typeof exitFunction === 'function') {
       exitFunction();
     }
+
+    process.exit(0);
+  }
+}
+
+async function confirmContinue(exitFunction) {
+  await confirm('Continue the release?', exitFunction);
