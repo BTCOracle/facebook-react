@@ -804,3 +804,8 @@ function saveBuildMetadata({archivePath, currentCommitHash}) {
     mkdirSync(BUILD_METADATA_TEMP_DIRECTORY);
   }
 
+  writeJsonSync(path, {archivePath, currentCommitHash}, {spaces: 2});
+}
+
+module.exports = {
+  checkNPMPermissions,
