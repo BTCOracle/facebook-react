@@ -852,3 +852,6 @@ async function checkNPMPermissions() {
       chalk.red(
         `NPM user {underline ${currentUser}} is not an owner for: ${chalk.bold(
           failedProjects.join(', ')
+        )}`
+      )
+    );
