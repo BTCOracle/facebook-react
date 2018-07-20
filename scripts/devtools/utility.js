@@ -895,3 +895,6 @@ async function confirmContinue(exitFunction) {
 async function execRead(command, options) {
   const {stdout} = await exec(command, options);
 
+  return stdout.trim();
+}
+
