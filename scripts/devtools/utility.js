@@ -957,3 +957,7 @@ async function checkNPMPermissions() {
     `Checking NPM permissions for ${chalk.bold(currentUser)}.`,
     {estimate: 2500}
   );
+
+  console.log('');
+
+  if (failedProjects.length) {
