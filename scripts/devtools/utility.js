@@ -981,3 +981,17 @@ async function checkNPMPermissions() {
 
 function clear() {
   console.clear();
+}
+
+async function confirm(message, exitFunction) {
+  console.log('');
+
+  const {confirmation} = await inquirer.prompt({
+    name: 'confirmation',
+    type: 'confirm',
+    message,
+  });
+
+  console.log('');
+
+  if (!confirmation) {
