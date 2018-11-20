@@ -1043,3 +1043,8 @@ module.exports = {
   confirm,
   confirmContinue,
   execRead,
+  logger,
+  readSavedBuildMetadata,
+  saveBuildMetadata,
+};
+
