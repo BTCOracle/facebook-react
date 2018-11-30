@@ -1056,3 +1056,5 @@ async function checkNPMPermissions() {
   const currentUser = await execRead('npm whoami');
   const failedProjects = [];
 
+  const checkProject = async project => {
+    const owners = (await execRead(`npm owner ls ${project}`))
