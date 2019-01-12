@@ -1094,3 +1094,6 @@ async function checkNPMPermissions() {
   }
 }
 
+function clear() {
+  console.clear();
+}
