@@ -1105,3 +1105,11 @@ async function confirm(message, exitFunction) {
     name: 'confirmation',
     type: 'confirm',
     message,
+  });
+
+  console.log('');
+
+  if (!confirmation) {
+    if (typeof exitFunction === 'function') {
+      exitFunction();
+    }
