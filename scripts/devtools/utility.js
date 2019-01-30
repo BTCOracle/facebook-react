@@ -1113,3 +1113,7 @@ async function confirm(message, exitFunction) {
     if (typeof exitFunction === 'function') {
       exitFunction();
     }
+
+    process.exit(0);
+  }
+}
