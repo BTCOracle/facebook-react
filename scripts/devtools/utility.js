@@ -1141,3 +1141,4 @@ function readSavedBuildMetadata() {
 
   return {archivePath, currentCommitHash};
 }
+
