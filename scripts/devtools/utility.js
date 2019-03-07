@@ -1148,3 +1148,7 @@ function saveBuildMetadata({archivePath, currentCommitHash}) {
   if (!existsSync(BUILD_METADATA_TEMP_DIRECTORY)) {
     mkdirSync(BUILD_METADATA_TEMP_DIRECTORY);
   }
+
+  writeJsonSync(path, {archivePath, currentCommitHash}, {spaces: 2});
+}
+
