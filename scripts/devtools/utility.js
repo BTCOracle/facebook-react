@@ -1152,3 +1152,9 @@ function saveBuildMetadata({archivePath, currentCommitHash}) {
   writeJsonSync(path, {archivePath, currentCommitHash}, {spaces: 2});
 }
 
+module.exports = {
+  checkNPMPermissions,
+  clear,
+  confirm,
+  confirmContinue,
+  execRead,
