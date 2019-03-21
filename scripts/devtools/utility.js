@@ -1166,3 +1166,6 @@ module.exports = {
 const logger = createLogger({
   storagePath: join(__dirname, '.progress-estimator'),
 });
+
+async function checkNPMPermissions() {
+  const currentUser = await execRead('npm whoami');
