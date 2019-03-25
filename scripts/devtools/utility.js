@@ -1169,3 +1169,4 @@ const logger = createLogger({
 
 async function checkNPMPermissions() {
   const currentUser = await execRead('npm whoami');
+  const failedProjects = [];
