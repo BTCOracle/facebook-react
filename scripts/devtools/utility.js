@@ -1175,3 +1175,12 @@ async function checkNPMPermissions() {
     const owners = (await execRead(`npm owner ls ${project}`))
       .split('\n')
       .filter(owner => owner)
+      .map(owner => owner.split(' ')[0]);
+
+    if (!owners.includes(currentUser)) {
+      failedProjects.push(project);
+    }
+  };
+
+  await logger(
+    Promise.all(NPM_PACKAGES.map(checkProject)),
