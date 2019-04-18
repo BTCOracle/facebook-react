@@ -1184,3 +1184,8 @@ async function checkNPMPermissions() {
 
   await logger(
     Promise.all(NPM_PACKAGES.map(checkProject)),
+    `Checking NPM permissions for ${chalk.bold(currentUser)}.`,
+    {estimate: 2500}
+  );
+
+  console.log('');
