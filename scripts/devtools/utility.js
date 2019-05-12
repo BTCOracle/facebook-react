@@ -1206,3 +1206,10 @@ async function checkNPMPermissions() {
       )
     );
     process.exit(1);
+  }
+}
+
+function clear() {
+  console.clear();
+}
+
