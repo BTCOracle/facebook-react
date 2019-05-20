@@ -1219,3 +1219,5 @@ async function confirm(message, exitFunction) {
   const {confirmation} = await inquirer.prompt({
     name: 'confirmation',
     type: 'confirm',
+    message,
+  });
