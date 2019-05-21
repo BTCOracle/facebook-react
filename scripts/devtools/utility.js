@@ -1221,3 +1221,8 @@ async function confirm(message, exitFunction) {
     type: 'confirm',
     message,
   });
+
+  console.log('');
+
+  if (!confirmation) {
+    if (typeof exitFunction === 'function') {
