@@ -1251,3 +1251,5 @@ function readSavedBuildMetadata() {
     console.error(chalk.dim(`  ${path}`));
     process.exit(1);
   }
+
+  const {archivePath, currentCommitHash} = readJsonSync(path);
