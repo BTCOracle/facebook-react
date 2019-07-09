@@ -1268,3 +1268,8 @@ function saveBuildMetadata({archivePath, currentCommitHash}) {
 }
 
 module.exports = {
+  checkNPMPermissions,
+  clear,
+  confirm,
+  confirmContinue,
+  execRead,
