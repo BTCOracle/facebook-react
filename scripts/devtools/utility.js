@@ -1309,3 +1309,12 @@ async function checkNPMPermissions() {
     console.error(chalk.red.bold('Insufficient NPM permissions'));
     console.error('');
     console.error(
+      chalk.red(
+        `NPM user {underline ${currentUser}} is not an owner for: ${chalk.bold(
+          failedProjects.join(', ')
+        )}`
+      )
+    );
+    console.error(
+      chalk.red(
+        'Please contact a React team member to be added to the above project(s).'
