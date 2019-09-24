@@ -1361,3 +1361,4 @@ async function execRead(command, options) {
 function readSavedBuildMetadata() {
   const path = join(BUILD_METADATA_TEMP_DIRECTORY, 'metadata');
 
+  if (!existsSync(path)) {
