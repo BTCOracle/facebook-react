@@ -1380,3 +1380,4 @@ function saveBuildMetadata({archivePath, currentCommitHash}) {
   }
 
   writeJsonSync(path, {archivePath, currentCommitHash}, {spaces: 2});
+}
