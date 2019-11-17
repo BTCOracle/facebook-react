@@ -1391,3 +1391,7 @@ module.exports = {
   logger,
   readSavedBuildMetadata,
   saveBuildMetadata,
+};
+
+const logger = createLogger({
+  storagePath: join(__dirname, '.progress-estimator'),
