@@ -1411,3 +1411,6 @@ async function checkNPMPermissions() {
       failedProjects.push(project);
     }
   };
+
+  await logger(
+    Promise.all(NPM_PACKAGES.map(checkProject)),
