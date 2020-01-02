@@ -1437,3 +1437,5 @@ async function checkNPMPermissions() {
     );
     process.exit(1);
   }
+}
+
