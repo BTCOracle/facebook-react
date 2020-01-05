@@ -1439,3 +1439,4 @@ async function checkNPMPermissions() {
   }
 }
 
+function clear() {
