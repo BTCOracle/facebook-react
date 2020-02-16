@@ -1485,3 +1485,8 @@ function readSavedBuildMetadata() {
   const {archivePath, currentCommitHash} = readJsonSync(path);
 
   return {archivePath, currentCommitHash};
+}
+
+function saveBuildMetadata({archivePath, currentCommitHash}) {
+  const path = join(BUILD_METADATA_TEMP_DIRECTORY, 'metadata');
+
